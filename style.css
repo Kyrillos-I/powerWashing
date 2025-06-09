@@ -1,3 +1,384 @@
-img {
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+img.logo {
   max-width: 100px;
+}
+
+.header {
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  background-color: #d0ebf4;
+  align-items: center;
+}
+
+.name {
+  margin-left: 25px;
+}
+.compName {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #05355d;
+  margin-bottom: 5px;
+}
+.compDescrp {
+  color: #05355d;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 11;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #05355d;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.flexWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.links > a {
+  position: relative;
+  color: #0566b8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.links > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #0566b8;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.links > a:hover::after {
+  transform: scaleX(1);
+}
+
+.background {
+  background: url("./assets/pwBackground.png") center/cover no-repeat;
+  width: 100vw;
+  min-height: 800px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 37, 64, 0.49) 49.73%,
+    rgba(126, 126, 126, 0.7) 100%
+  );
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slogan {
+  color: #fff;
+  font-family: Inter;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 80%;
+}
+
+.explanation {
+  color: #fff;
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 80%;
+}
+.estimate {
+  display: flex;
+  border-radius: 30px;
+  background: #1d40ae;
+  width: 450px;
+  height: 120px;
+  border: none;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.estimate:hover {
+  transform: scale(1.1);
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  min-height: 650px;
+}
+
+.servicesTitle {
+  color: #05355d;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 80%;
+}
+
+.serviceCards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+}
+.card {
+  width: 320px;
+  height: 320px;
+  border-radius: 10px;
+  border: 6px solid #05355d;
+  background: rgba(217, 217, 217, 0);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.icon {
+  position: absolute;
+  position: absolute;
+  top: -27px; /* Raise it above the top border */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0px;
+  display: block;
+}
+.cardTitle {
+  color: #05355d;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 35px;
+  align-self: center;
+}
+.description {
+  color: #05355d;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.appointmentBlock {
+  background-color: #06365e;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 800px;
+}
+.bookAppointment {
+  color: #fff;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 80%;
+}
+.placeholder {
+  background-color: grey;
+  width: 80%;
+  height: 600px;
+  font-size: 100px;
+}
+
+.contactUsBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 500px;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.contactMethods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.phone,
+.email {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.number,
+.emailStated {
+  color: #05355d;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 40px;
+    width: 90%;
+  }
+  .explanation {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .estimate {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .background {
+    min-height: 600px;
+  }
+  .header {
+    height: 75px;
+  }
+  img.logo {
+    width: 75px;
+  }
+
+  .compName {
+    font-size: 20px;
+  }
+  .compDescrp {
+    font-size: 15px;
+  }
+
+  .name {
+    margin-left: 0px;
+  }
+
+  .flexWrap {
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    background-color: #d0ebf4;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    z-index: 10;
+    border: #05355d 3px solid;
+  }
+  .links.active > a {
+    border-bottom: #06365e 3px solid;
+  }
+  .links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .estimate {
+    max-width: 80%;
+    font-size: 25px;
+    height: 80px;
+  }
+
+  .servicesTitle {
+    font-size: 40px;
+    width: 90%;
+  }
+  .card {
+    width: 250px;
+  }
+  .cardTitle {
+    font-size: 25px;
+  }
+  .description {
+    font-size: 20px;
+  }
+  .serviceCards {
+    margin-top: 35px;
+    gap: 25px;
+  }
+
+  .bookAppointment {
+    font-size: 40px;
+    width: 90%;
+  }
+  .placeholder {
+    font-size: 20px;
+  }
+
+  .number,
+  .emailStated {
+    font-size: 18px;
+  }
 }

@@ -4,21 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hose And Bros Power Washing</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="header">
-      <img src="./assets/Logo.png" alt="Logo" />
-      <div class="name">
-        <h1>Hose And Bros</h1>
-        <h2>Power Washing</h2>
-      </div>
-      <div class="links">
-        <a href="">Home</a>
-        <a href="">Services</a>
-        <a href="">Book Now</a>
-        <a href="">Contact Us</a>
+      <img src="./assets/Logo.png" alt="Logo" class="logo" />
+      <div class="flexWrap">
+        <div class="name">
+          <h1 class="compName">Hose And Bros</h1>
+          <h2 class="compDescrp">Power Washing</h2>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#book">Book Now</a>
+          <a href="#contact">Contact Us</a>
+        </div>
       </div>
     </div>
+    <div id="home" class="home">
+      <div class="background">
+        <div class="overlay">
+          <div class="slogan wipe">Bringing The Shine Back To The Shore</div>
+          <div class="explanation">
+            Proudly serving homes across the New Jersey Shore, we specialize in
+            revitalizing siding, driveways, patios, and more. With reliable
+            service and spotless results, we’ll leave your home looking so good,
+            it’ll make your neighbors jealous.
+          </div>
+          <a href="#book" class="estimate">Book A Free Estimate</a>
+        </div>
+      </div>
+    </div>
+    <div id="services" class="services">
+      <div class="servicesTitle">Our Services</div>
+      <div class="serviceCards">
+        <div class="card c1">
+          <img src="./assets/house.png" alt="Home Icon" class="icon" />
+          <h4 class="cardTitle">House Washing</h4>
+          <p class="description">
+            Remove dirt, mildew, and algae from your home’s exterior for a
+            fresh, like-new look—without damaging your siding.
+          </p>
+        </div>
+        <div class="card c2">
+          <img src="./assets/driveway.png" alt="Driveway Icon" class="icon" />
+          <h4 class="cardTitle">Driveways/Sidewalks</h4>
+          <p class="description">
+            We blast away years of grime, oil stains, and buildup to restore
+            your concrete surfaces to their original brightness.
+          </p>
+        </div>
+        <div class="card c3">
+          <img src="./assets/office.png" alt="Office Icon" class="icon" />
+          <h4 class="cardTitle">Commercial Cleaning</h4>
+          <p class="description">
+            Keep your storefront or property spotless and welcoming with
+            professional grade pressure washing that makes a lasting first
+            impression.
+          </p>
+        </div>
+        <div class="card c4">
+          <img src="./assets/trash.png" alt="" class="icon" />
+          <h4 class="cardTitle">Trash Can Cleaning</h4>
+          <p class="description">
+            Say goodbye to foul odors. We deep clean and sanitize your trash
+            bins, leaving them fresh, germ-free, and safe for your home or
+            business.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="book" class="appointmentBlock">
+      <h3 class="bookAppointment">Book An Appoinment</h3>
+      <div class="placeholder">Placeholder</div>
+    </div>
+    <div id="contact" class="contactUsBlock">
+      <h3 class="contactUs servicesTitle">Contact Us</h3>
+      <div class="contactMethods">
+        <div class="phone">
+          <img src="./assets/phone.png" alt="Phone Icon" class="phoneImg" />
+          <p class="number">phone numbers: (201) 588-0151 & (***) ***-****</p>
+        </div>
+        <div class="email">
+          <img src="./assets/email.png" alt="Email Icon" class="emailImg" />
+          <p class="emailStated">Email: support@hoseandbros.com</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        document.querySelector(".links").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
